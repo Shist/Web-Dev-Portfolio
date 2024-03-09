@@ -23,14 +23,34 @@
 }
 
 .socials-list {
+  display: flex;
+  column-gap: 15px;
   &__item {
+    width: 20px;
+    height: 20px;
     .socials-list__item-link {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      transition: 0.3s;
     }
     .socials-list__item-link_github {
+      background-image: url("../../images/icon-github.svg");
+      &:hover {
+        transform: scale(1.1);
+      }
     }
     .socials-list__item-link_insta {
+      background-image: url("../../images/icon-instagram.svg");
+      &:hover {
+        transform: scale(1.1);
+      }
     }
     .socials-list__item-link_facebook {
+      background-image: url("../../images/icon-facebook.svg");
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }

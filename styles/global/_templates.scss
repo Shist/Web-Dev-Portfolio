@@ -22,6 +22,7 @@
   font-family: $font-opensans;
   font-size: $f-s;
   line-height: $l-h;
+  font-weight: 500;
   color: $color-black;
 }
 
@@ -30,6 +31,7 @@
   font-family: $font-opensans;
   font-size: $f-s;
   line-height: $l-h;
+  font-weight: 500;
   color: $c;
   text-decoration: none;
   transition: 0.3s;
@@ -43,6 +45,7 @@
   font-family: $font-opensans;
   font-size: 14px;
   line-height: 21px;
+  font-weight: bold;
   text-align: center;
   color: $color-black;
   background-color: $bg-c;
@@ -51,6 +54,8 @@
   transition: 0.3s;
   &:hover {
     transform: scale(1.05);
+    filter: brightness(110%);
     background-color: $color-orange;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   }
 }

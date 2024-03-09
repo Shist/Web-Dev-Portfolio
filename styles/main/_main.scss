@@ -2,14 +2,21 @@
 @import "../global/templates";
 
 .main-info-section {
+  position: relative;
   min-height: 800px;
   background-image: url("../../images/background.png");
   background-size: cover;
+  background-position: center;
   &__socials-wrapper {
     position: absolute;
+    top: 383px;
+    left: -107px;
     display: flex;
+    align-items: center;
+    column-gap: 15px;
+    transform: rotate(270deg);
     .main-info-section__socials-text {
-      @include default-text(16px, 24px);
+      @include default-headline(16px, 24px);
     }
     .main-info-section__socials-divider {
       width: 70px;
@@ -20,15 +27,39 @@
   &__person-info-wrapper {
     @extend %default-container;
     padding-top: 200px;
+    padding-bottom: 362px;
+    border-top: 1px solid $color-black;
+    border-inline: 1px solid $color-black;
     .main-info-section__name-signature-text {
+      position: relative;
+      z-index: 0;
+      padding-left: 10px;
+      margin-bottom: 9px;
       @include default-headline(16px, 24px);
+      &::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 0;
+        z-index: -1;
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: $color-orange;
+      }
     }
     .main-info-section__major-headline {
+      margin-bottom: 25px;
+      max-width: 530px;
       @include default-headline(48px, 60px);
     }
     .main-info-section__btns-wrapper {
+      display: flex;
+      column-gap: 19px;
       .main-info-section__btn-portfolio {
         @include default-btn(135px, $color-orange);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
       }
       .main-info-section__btn-about-me {
         @include default-btn(135px, transparent);

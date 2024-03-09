@@ -42,18 +42,26 @@
 }
 
 .main-info-section {
+  position: relative;
   min-height: 800px;
   background-image: url("../../images/background.png");
   background-size: cover;
+  background-position: center;
 }
 .main-info-section__socials-wrapper {
   position: absolute;
+  top: 383px;
+  left: -107px;
   display: flex;
+  align-items: center;
+  column-gap: 15px;
+  transform: rotate(270deg);
 }
 .main-info-section__socials-wrapper .main-info-section__socials-text {
   font-family: "OpenSans";
   font-size: 16px;
   line-height: 24px;
+  font-weight: bold;
   color: #000000;
 }
 .main-info-section__socials-wrapper .main-info-section__socials-divider {
@@ -63,20 +71,45 @@
 }
 .main-info-section__person-info-wrapper {
   padding-top: 200px;
+  padding-bottom: 362px;
+  border-top: 1px solid #000000;
+  border-inline: 1px solid #000000;
 }
 .main-info-section__person-info-wrapper .main-info-section__name-signature-text {
+  position: relative;
+  z-index: 0;
+  padding-left: 10px;
+  margin-bottom: 9px;
   font-family: "OpenSans";
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
   color: #000000;
 }
+.main-info-section__person-info-wrapper .main-info-section__name-signature-text::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffa501;
+}
 .main-info-section__person-info-wrapper .main-info-section__major-headline {
+  margin-bottom: 25px;
+  max-width: 530px;
   font-family: "OpenSans";
   font-size: 48px;
   line-height: 60px;
   font-weight: bold;
   color: #000000;
+}
+.main-info-section__person-info-wrapper .main-info-section__btns-wrapper {
+  display: flex;
+  column-gap: 19px;
 }
 .main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-portfolio {
   max-width: 135px;
@@ -85,16 +118,20 @@
   font-family: "OpenSans";
   font-size: 14px;
   line-height: 21px;
+  font-weight: bold;
   text-align: center;
   color: #000000;
   background-color: #ffa501;
   border: none;
   cursor: pointer;
   transition: 0.3s;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 .main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-portfolio:hover {
   transform: scale(1.05);
+  filter: brightness(110%);
   background-color: #ffa501;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 .main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-about-me {
   max-width: 135px;
@@ -103,6 +140,7 @@
   font-family: "OpenSans";
   font-size: 14px;
   line-height: 21px;
+  font-weight: bold;
   text-align: center;
   color: #000000;
   background-color: transparent;
@@ -112,7 +150,9 @@
 }
 .main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-about-me:hover {
   transform: scale(1.05);
+  filter: brightness(110%);
   background-color: #ffa501;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .main-info-section__person-info-wrapper {
@@ -135,4 +175,37 @@
 
 .appeared-flex {
   display: flex !important;
+}
+
+.socials-list {
+  display: flex;
+  column-gap: 15px;
+}
+.socials-list__item {
+  width: 20px;
+  height: 20px;
+}
+.socials-list__item .socials-list__item-link {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+}
+.socials-list__item .socials-list__item-link_github {
+  background-image: url("../../images/icon-github.svg");
+}
+.socials-list__item .socials-list__item-link_github:hover {
+  transform: scale(1.1);
+}
+.socials-list__item .socials-list__item-link_insta {
+  background-image: url("../../images/icon-instagram.svg");
+}
+.socials-list__item .socials-list__item-link_insta:hover {
+  transform: scale(1.1);
+}
+.socials-list__item .socials-list__item-link_facebook {
+  background-image: url("../../images/icon-facebook.svg");
+}
+.socials-list__item .socials-list__item-link_facebook:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=glStyle.css.map */
