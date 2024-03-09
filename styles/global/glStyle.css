@@ -1,19 +1,19 @@
-@import "../../fonts/Poppins-Bold/font-poppins-bold.css";
-@import "../../fonts/Poppins-Medium/font-poppins-medium.css";
-@import "../../fonts/Poppins-Bold/font-poppins-bold.css";
-@import "../../fonts/Poppins-Medium/font-poppins-medium.css";
-@import "../../fonts/Poppins-Bold/font-poppins-bold.css";
-@import "../../fonts/Poppins-Medium/font-poppins-medium.css";
-@import "../../fonts/Poppins-Bold/font-poppins-bold.css";
-@import "../../fonts/Poppins-Medium/font-poppins-medium.css";
-@import "../../fonts/Poppins-Bold/font-poppins-bold.css";
-@import "../../fonts/Poppins-Medium/font-poppins-medium.css";
-@import "../../fonts/Poppins-Bold/font-poppins-bold.css";
-@import "../../fonts/Poppins-Medium/font-poppins-medium.css";
-@import "../../fonts/Poppins-Bold/font-poppins-bold.css";
-@import "../../fonts/Poppins-Medium/font-poppins-medium.css";
-@import "../../fonts/Poppins-Bold/font-poppins-bold.css";
-@import "../../fonts/Poppins-Medium/font-poppins-medium.css";
+@import "../../fonts/OpenSans-Bold/font-opensans-bold.css";
+@import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
+@import "../../fonts/OpenSans-Bold/font-opensans-bold.css";
+@import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
+@import "../../fonts/OpenSans-Bold/font-opensans-bold.css";
+@import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
+@import "../../fonts/OpenSans-Bold/font-opensans-bold.css";
+@import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
+@import "../../fonts/OpenSans-Bold/font-opensans-bold.css";
+@import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
+@import "../../fonts/OpenSans-Bold/font-opensans-bold.css";
+@import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
+@import "../../fonts/OpenSans-Bold/font-opensans-bold.css";
+@import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
+@import "../../fonts/OpenSans-Bold/font-opensans-bold.css";
+@import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
 .main-info-section__person-info-wrapper {
   max-width: 1140px;
   width: 100%;
@@ -34,9 +34,6 @@
   left: 0;
   right: 0;
 }
-.header__container {
-  position: relative;
-}
 .main-info-section__person-info-wrapper {
   max-width: 1140px;
   width: 100%;
@@ -54,7 +51,7 @@
   display: flex;
 }
 .main-info-section__socials-wrapper .main-info-section__socials-text {
-  font-family: "Poppins";
+  font-family: "OpenSans";
   font-size: 16px;
   line-height: 24px;
   color: #000000;
@@ -68,14 +65,14 @@
   padding-top: 200px;
 }
 .main-info-section__person-info-wrapper .main-info-section__name-signature-text {
-  font-family: "Poppins";
+  font-family: "OpenSans";
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
   color: #000000;
 }
 .main-info-section__person-info-wrapper .main-info-section__major-headline {
-  font-family: "Poppins";
+  font-family: "OpenSans";
   font-size: 48px;
   line-height: 60px;
   font-weight: bold;
@@ -85,7 +82,7 @@
   max-width: 135px;
   width: 100%;
   padding: 12px 26px;
-  font-family: "Poppins";
+  font-family: "OpenSans";
   font-size: 14px;
   line-height: 21px;
   text-align: center;
@@ -103,7 +100,7 @@
   max-width: 135px;
   width: 100%;
   padding: 12px 26px;
-  font-family: "Poppins";
+  font-family: "OpenSans";
   font-size: 14px;
   line-height: 21px;
   text-align: center;
