@@ -95,6 +95,14 @@
   @media (max-width: $pc-s) {
     border: none;
   }
+  @media (max-width: $tablet-l) {
+    padding-top: 80px;
+    padding-inline: 32px 48px;
+  }
+  @media (max-width: $phone-l) {
+    padding-top: 40px;
+    padding-inline: 8px 12px;
+  }
   &__experience-label {
     position: relative;
     z-index: 1;
@@ -116,6 +124,11 @@
   &__utility-label {
     margin-bottom: 25px;
     @include default-headline(36px, 60px);
+    text-align: center;
+    @media (max-width: $tablet-s) {
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
   &__divider {
     margin-bottom: 60px;
@@ -124,9 +137,15 @@
     background-color: $color-orange;
   }
   &__chapters-wrapper {
+    align-self: normal;
     display: flex;
-    column-gap: 134px;
+    justify-content: space-between;
+    row-gap: 40px;
+    column-gap: 10px;
     flex-wrap: wrap;
+    @media (max-width: $laptop-l) {
+      justify-content: center;
+    }
   }
 }
 
@@ -235,6 +254,12 @@
   border-bottom: 1px solid $color-black;
   @media (max-width: $pc-s) {
     border: none;
+  }
+  @media (max-width: $tablet-l) {
+    padding-top: 80px;
+  }
+  @media (max-width: $phone-l) {
+    padding-top: 40px;
   }
   &__img {
     width: 400px;
