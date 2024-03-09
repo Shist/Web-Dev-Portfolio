@@ -23,19 +23,19 @@
             <ul class="socials-list">
               <li class="socials-list__item">
                 <a
-                  href="#"
+                  href="https://github.com/"
                   class="socials-list__item-link socials-list__item-link_github"
                 ></a>
               </li>
               <li class="socials-list__item">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/"
                   class="socials-list__item-link socials-list__item-link_insta"
                 ></a>
               </li>
               <li class="socials-list__item">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/"
                   class="socials-list__item-link socials-list__item-link_facebook"
                 ></a>
               </li>
@@ -183,6 +183,107 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="contacts-section">
+          <img
+            src="./images/photo.png"
+            alt="photo of the person"
+            class="contacts-section__img"
+          />
+          <div class="contacts-section__info-wrapper">
+            <h3 class="contacts-section__contacts-label">Контакты</h3>
+            <h2 class="contacts-section__contact-me-label">
+              Свяжитесь со мной
+            </h2>
+            <div class="contacts-section__orange-line"></div>
+            <span class="contacts-section__simple-label"
+              >Любым удобным для вас способом:</span
+            >
+            <ul class="contacts-section__socials-list">
+              <li class="contacts-section__social-item">
+                <a
+                  href="https://www.facebook.com/"
+                  class="contacts-section__social-link contacts-section__social-link_facebook"
+                ></a>
+              </li>
+              <li class="contacts-section__social-item">
+                <a
+                  href="https://telegram.org/"
+                  class="contacts-section__social-link contacts-section__social-link_telegram"
+                ></a>
+              </li>
+              <li class="contacts-section__social-item">
+                <a
+                  href="https://www.instagram.com/"
+                  class="contacts-section__social-link contacts-section__social-link_insta"
+                ></a>
+              </li>
+            </ul>
+            <span class="contacts-section__simple-label"
+              >Или оставьте ваши данные и я сама вам напишу:</span
+            >
+            <form action="#" class="contacts-section__contact-form">
+              <div class="contacts-section__name-mail-wrapper">
+                <div class="form-input-wrapper">
+                  <label for="contact-name" class="form-input-wrapper__label">
+                    Ваше имя
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Иван"
+                    name="contact-name"
+                    id="contact-name"
+                    class="form-input-wrapper__input"
+                    required
+                  />
+                </div>
+                <div class="form-input-wrapper">
+                  <label for="contact-name" class="form-input-wrapper__label">
+                    Ваша почта
+                  </label>
+                  <input
+                    type="email"
+                    name="contact-email"
+                    id="contact-email"
+                    class="form-input-wrapper__input"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-textarea-wrapper">
+                <label for="contact-msg" class="form-textarea-wrapper__label">
+                  Ваше сообщение
+                </label>
+                <textarea
+                  name="contact-msg"
+                  id="contact-msg"
+                  class="form-textarea-wrapper__textarea"
+                  required
+                ></textarea>
+              </div>
+              <div class="contacts-section__privacy-policy-wrapper">
+                <input
+                  type="checkbox"
+                  name="policy-agreement"
+                  id="policy-agreement"
+                  class="contacts-section__privacy-policy-checkbox"
+                  required
+                />
+                <label
+                  for="policy-agreement"
+                  class="contacts-section__privacy-policy-label"
+                >
+                  Я согласен(а) с
+                  <a href="#" class="contacts-section__privacy-policy-link"
+                    >политикой конфиденциальности</a
+                  >
+                </label>
+              </div>
+              <button class="contacts-section__contact-form-submit-btn">
+                Отправить сообщение
+              </button>
+            </form>
           </div>
         </div>
       </main>
