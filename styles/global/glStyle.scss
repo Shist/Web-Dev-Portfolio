@@ -4,4 +4,12 @@
 @import "../main/main";
 @import "../footer/footer";
 
-// Here will be global styles
+// This class is needed to hide elements (by adding this class)
+.hidden-element {
+  display: none !important;
+}
+
+// This class is needed to make elements appear (by adding this class)
+.appeared-flex {
+  display: flex !important;
+}

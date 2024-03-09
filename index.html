@@ -56,7 +56,7 @@
             </div>
           </div>
         </div>
-        <div class="utility-section">
+        <div class="utility-section" id="utility-section">
           <h3 class="utility-section__experience-label">Опыт</h3>
           <h2 class="utility-section__utility-label">Чем я буду полезна</h2>
           <div class="utility-section__divider"></div>
@@ -185,7 +185,7 @@
             </div>
           </div>
         </div>
-        <div class="contacts-section">
+        <div class="contacts-section" id="contacts-section">
           <img
             src="./images/photo.png"
             alt="photo of the person"
@@ -288,6 +288,57 @@
         </div>
       </main>
       <footer class="footer"></footer>
+      <div class="burger-menu hidden-element">
+        <div class="burger-menu__nav-and-socials-wrapper">
+          <button class="burger-menu__close-btn"></button>
+          <nav class="burger-menu__nav">
+            <ul class="burger-menu__nav-list">
+              <li class="burger-menu__nav-list-item">
+                <a href="#" class="burger-menu__link">ПРО МЕНЯ</a>
+              </li>
+              <li class="burger-menu__nav-list-item">
+                <a href="#utility-section" class="burger-menu__link"
+                  >МОЙ ОПЫТ</a
+                >
+              </li>
+              <li class="burger-menu__nav-list-item">
+                <a href="#" class="burger-menu__link">МОИ НАВЫКИ</a>
+              </li>
+              <li class="burger-menu__nav-list-item">
+                <a href="#" class="burger-menu__link">МОИ РАБОТЫ</a>
+              </li>
+              <li class="burger-menu__nav-list-item">
+                <a href="#" class="burger-menu__link">ПРАЙС-ЛИСТ</a>
+              </li>
+              <li class="burger-menu__nav-list-item">
+                <a href="#contacts-section" class="burger-menu__link"
+                  >КОНТАКТЫ</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <ul class="socials-list">
+            <li class="socials-list__item">
+              <a
+                href="https://github.com/"
+                class="socials-list__item-link socials-list__item-link_github"
+              ></a>
+            </li>
+            <li class="socials-list__item">
+              <a
+                href="https://www.instagram.com/"
+                class="socials-list__item-link socials-list__item-link_insta"
+              ></a>
+            </li>
+            <li class="socials-list__item">
+              <a
+                href="https://www.facebook.com/"
+                class="socials-list__item-link socials-list__item-link_facebook"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <script src="./scripts/index.js" type="module"></script>
   </body>
