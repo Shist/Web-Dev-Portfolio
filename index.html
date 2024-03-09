@@ -5,12 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./images/app-fav-icon.ico" />
     <link rel="stylesheet" href="./styles/normalize/normalize.css" />
-    <link rel="stylesheet" href="./styles/global//glStyle.css" />
+    <link rel="stylesheet" href="./styles/global/glStyle.css" />
     <title>Web-Dev-Portfolio</title>
   </head>
   <body>
     <div class="global-container">
-      <main class="main"></main>
+      <header class="header">
+        <div class="header__container">
+          <button class="header__burger-menu-btn"></button>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main-info-section">
+          <div class="main-info-section__socials-wrapper">
+            <span class="main-info-section__socials-text">Социальные сети</span>
+            <div class="main-info-section__socials-divider"></div>
+            <ul class="socials-list">
+              <li class="socials-list__item">
+                <a
+                  href="#"
+                  class="socials-list__item-link socials-list__item-link_github"
+                ></a>
+              </li>
+              <li class="socials-list__item">
+                <a
+                  href="#"
+                  class="socials-list__item-link socials-list__item-link_insta"
+                ></a>
+              </li>
+              <li class="socials-list__item">
+                <a
+                  href="#"
+                  class="socials-list__item-link socials-list__item-link_facebook"
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-info-section__person-info-wrapper">
+            <h3 class="main-info-section__name-signature-text">
+              Меня зовут Александра Смит
+            </h3>
+            <h1 class="main-info-section__major-headline">
+              Я web-разработчик из города Москва
+            </h1>
+            <div class="main-info-section__btns-wrapper">
+              <button class="main-info-section__btn-portfolio">
+                Портфолио
+              </button>
+              <button class="main-info-section__btn-about-me">Про меня</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
     </div>
     <script src="./scripts/index.js" type="module"></script>
   </body>

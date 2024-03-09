@@ -1,0 +1,9 @@
+@import "../global/vars";
+@import "../global/templates";
+
+.header {
+  &__container {
+    .header__burger-menu-btn {
+    }
+  }
+}
