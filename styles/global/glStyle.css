@@ -33,7 +33,27 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 }
+.header__container {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+.header__container .header__burger-menu-btn {
+  width: 40px;
+  height: 40px;
+  background: url(../../images/icon-burger-menu.svg) #bcdbef center/36px 21px no-repeat;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header__container .header__burger-menu-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(110%);
+}
+
 .main-info-section__person-info-wrapper {
   max-width: 1140px;
   width: 100%;
@@ -44,9 +64,8 @@
 .main-info-section {
   position: relative;
   min-height: 800px;
-  background-image: url("../../images/background.png");
-  background-size: cover;
-  background-position: center;
+  display: flex;
+  background: url("../../images/background.png") center/cover no-repeat;
 }
 .main-info-section__socials-wrapper {
   position: absolute;
@@ -71,13 +90,12 @@
 }
 .main-info-section__person-info-wrapper {
   padding-top: 200px;
-  padding-bottom: 362px;
   border-top: 1px solid #000000;
   border-inline: 1px solid #000000;
 }
 .main-info-section__person-info-wrapper .main-info-section__name-signature-text {
   position: relative;
-  z-index: 0;
+  z-index: 1;
   padding-left: 10px;
   margin-bottom: 9px;
   font-family: "OpenSans";

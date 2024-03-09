@@ -6,8 +6,24 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   &__container {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: flex-end;
     .header__burger-menu-btn {
+      width: 40px;
+      height: 40px;
+      background: url(../../images/icon-burger-menu.svg) $color-light-blue
+        center/36px 21px no-repeat;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.1);
+        filter: brightness(110%);
+      }
     }
   }
 }
