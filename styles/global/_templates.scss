@@ -9,7 +9,7 @@
 }
 
 // Default settings of headlines; $f-s - size; $l-h - line height
-@mixin default-h($f-s, $l-h) {
+@mixin default-headline($f-s, $l-h) {
   font-family: $font-poppins;
   font-size: $f-s;
   line-height: $l-h;
@@ -17,8 +17,8 @@
   color: $color-black;
 }
 
-// Default settings of paragraphs; $f-s - size; $l-h - line height
-@mixin default-p($f-s, $l-h) {
+// Default settings of text; $f-s - size; $l-h - line height
+@mixin default-text($f-s, $l-h) {
   font-family: $font-poppins;
   font-size: $f-s;
   line-height: $l-h;
@@ -26,7 +26,7 @@
 }
 
 // Default settings of links; $f-s - size; $l-h - line height; $c - color
-@mixin default-a($f-s, $l-h, $c) {
+@mixin default-link($f-s, $l-h, $c) {
   font-family: $font-poppins;
   font-size: $f-s;
   line-height: $l-h;
@@ -51,6 +51,6 @@
   transition: 0.3s;
   &:hover {
     transform: scale(1.05);
-    color: $color-orange;
+    background-color: $color-orange;
   }
 }

@@ -1,25 +1,37 @@
 @import "../global/vars";
 @import "../global/templates";
 
-.main {
-}
-
 .main-info-section {
+  min-height: 800px;
+  background-image: url("../../images/background.png");
+  background-size: cover;
   &__socials-wrapper {
+    position: absolute;
+    display: flex;
     .main-info-section__socials-text {
+      @include default-text(16px, 24px);
     }
     .main-info-section__socials-divider {
+      width: 70px;
+      height: 2px;
+      background-color: $color-black;
     }
   }
   &__person-info-wrapper {
+    @extend %default-container;
+    padding-top: 200px;
     .main-info-section__name-signature-text {
+      @include default-headline(16px, 24px);
     }
     .main-info-section__major-headline {
+      @include default-headline(48px, 60px);
     }
     .main-info-section__btns-wrapper {
       .main-info-section__btn-portfolio {
+        @include default-btn(135px, $color-orange);
       }
       .main-info-section__btn-about-me {
+        @include default-btn(135px, transparent);
       }
     }
   }

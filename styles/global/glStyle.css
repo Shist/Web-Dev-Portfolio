@@ -14,7 +14,119 @@
 @import "../../fonts/Poppins-Medium/font-poppins-medium.css";
 @import "../../fonts/Poppins-Bold/font-poppins-bold.css";
 @import "../../fonts/Poppins-Medium/font-poppins-medium.css";
+.main-info-section__person-info-wrapper {
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 0;
+  margin-inline: auto;
+}
+
+.main-info-section__person-info-wrapper {
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 0;
+  margin-inline: auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header__container {
+  position: relative;
+}
+.main-info-section__person-info-wrapper {
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 0;
+  margin-inline: auto;
+}
+
+.main-info-section {
+  min-height: 800px;
+  background-image: url("../../images/background.png");
+  background-size: cover;
+}
+.main-info-section__socials-wrapper {
+  position: absolute;
+  display: flex;
+}
+.main-info-section__socials-wrapper .main-info-section__socials-text {
+  font-family: "Poppins";
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+.main-info-section__socials-wrapper .main-info-section__socials-divider {
+  width: 70px;
+  height: 2px;
+  background-color: #000000;
+}
+.main-info-section__person-info-wrapper {
+  padding-top: 200px;
+}
+.main-info-section__person-info-wrapper .main-info-section__name-signature-text {
+  font-family: "Poppins";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+.main-info-section__person-info-wrapper .main-info-section__major-headline {
+  font-family: "Poppins";
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: bold;
+  color: #000000;
+}
+.main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-portfolio {
+  max-width: 135px;
+  width: 100%;
+  padding: 12px 26px;
+  font-family: "Poppins";
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+  background-color: #ffa501;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-portfolio:hover {
+  transform: scale(1.05);
+  background-color: #ffa501;
+}
+.main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-about-me {
+  max-width: 135px;
+  width: 100%;
+  padding: 12px 26px;
+  font-family: "Poppins";
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-about-me:hover {
+  transform: scale(1.05);
+  background-color: #ffa501;
+}
+
+.main-info-section__person-info-wrapper {
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 0;
+  margin-inline: auto;
+}
+
 .global-container {
+  position: relative;
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;

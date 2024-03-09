@@ -2,7 +2,12 @@
 @import "../global/templates";
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   &__container {
+    position: relative;
     .header__burger-menu-btn {
     }
   }
