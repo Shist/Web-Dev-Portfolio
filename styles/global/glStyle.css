@@ -14,14 +14,14 @@
 @import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
 @import "../../fonts/OpenSans-Bold/font-opensans-bold.css";
 @import "../../fonts/OpenSans-Medium/font-opensans-medium.css";
-.main-info-section__person-info-wrapper {
+.contacts-section, .utility-section, .main-info-section__person-info-wrapper {
   max-width: 1140px;
   width: 100%;
   margin-top: 0;
   margin-inline: auto;
 }
 
-.main-info-section__person-info-wrapper {
+.contacts-section, .utility-section, .main-info-section__person-info-wrapper {
   max-width: 1140px;
   width: 100%;
   margin-top: 0;
@@ -54,7 +54,7 @@
   filter: brightness(110%);
 }
 
-.main-info-section__person-info-wrapper {
+.contacts-section, .utility-section, .main-info-section__person-info-wrapper {
   max-width: 1140px;
   width: 100%;
   margin-top: 0;
@@ -173,7 +173,173 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.main-info-section__person-info-wrapper {
+.utility-section {
+  padding-top: 120px;
+  padding-inline: 65px 89px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-inline: 1px solid #000000;
+}
+.utility-section__experience-label {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 6px;
+  font-family: "OpenSans";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+.utility-section__experience-label::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 5px;
+  z-index: -1;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffa501;
+}
+.utility-section__utility-label {
+  margin-bottom: 25px;
+  font-family: "OpenSans";
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: bold;
+  color: #000000;
+}
+.utility-section__divider {
+  margin-bottom: 60px;
+  width: 60px;
+  height: 3px;
+  background-color: #ffa501;
+}
+.utility-section__edu-exp-wrapper {
+  display: flex;
+  column-gap: 136px;
+}
+
+.edu-exp-wrapper {
+  position: relative;
+  z-index: 1;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 45px;
+}
+.edu-exp-wrapper__headline {
+  font-family: "OpenSans";
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.orange-circles-structure {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.orange-circles-structure__small-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffa501;
+}
+.orange-circles-structure__all-structures-wrapper {
+  padding-left: 7px;
+  display: flex;
+  align-items: flex-start;
+}
+.orange-circles-structure__all-structures-wrapper .orange-circles-structure__vertical-line {
+  width: 1px;
+  height: 343px;
+  background-color: #000000;
+}
+.orange-circles-structure__all-structures-wrapper .orange-circles-structure__all-horizontal-structures-wrapper {
+  padding-top: 51px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 138px;
+}
+.orange-circles-structure__all-structures-wrapper .orange-circles-structure__all-horizontal-structures-wrapper .orange-circles-structure__horisontal-structure-wrapper {
+  display: flex;
+  align-items: center;
+}
+.orange-circles-structure__all-structures-wrapper .orange-circles-structure__all-horizontal-structures-wrapper .orange-circles-structure__horisontal-structure-wrapper .orange-circles-structure__horizontal-line {
+  width: 42px;
+  height: 1px;
+  background-color: #000000;
+}
+.orange-circles-structure__all-structures-wrapper .orange-circles-structure__all-horizontal-structures-wrapper .orange-circles-structure__horisontal-structure-wrapper .orange-circles-structure__big-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffa501;
+}
+
+.edu-exp-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 12px;
+}
+.edu-exp-info-card__icon-head-info-wrapper {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 15px;
+}
+.edu-exp-info-card__icon-head-info-wrapper .edu-exp-info-card__icon {
+  padding-top: 15px;
+  padding-left: 15px;
+  width: 40px;
+  height: 40px;
+}
+.edu-exp-info-card__icon-head-info-wrapper .edu-exp-info-card__head-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.edu-exp-info-card__icon-head-info-wrapper .edu-exp-info-card__head-info-wrapper .edu-exp-info-card__head-info-main {
+  font-family: "OpenSans";
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #000000;
+}
+.edu-exp-info-card__icon-head-info-wrapper .edu-exp-info-card__head-info-wrapper .edu-exp-info-card__head-info-additional {
+  font-family: "OpenSans";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+.edu-exp-info-card__text {
+  padding-right: 21px;
+  padding-bottom: 4px;
+  font-family: "OpenSans";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.contacts-section {
+  padding: 120px 35px 91px 52px;
+  display: flex;
+  border-inline: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.main-info-section__person-info-wrapper, .utility-section, .contacts-section {
   max-width: 1140px;
   width: 100%;
   margin-top: 0;
