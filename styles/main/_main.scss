@@ -3,3 +3,125 @@
 
 .main {
 }
+
+.main-info-section {
+  &__socials-wrapper {
+    .main-info-section__socials-text {
+    }
+    .main-info-section__socials-divider {
+    }
+  }
+  &__person-info-wrapper {
+    .main-info-section__name-signature-text {
+    }
+    .main-info-section__major-headline {
+    }
+    .main-info-section__btns-wrapper {
+      .main-info-section__btn-portfolio {
+      }
+      .main-info-section__btn-about-me {
+      }
+    }
+  }
+}
+
+.utility-section {
+  &__experience-label {
+  }
+  &__utility-label {
+  }
+  &__divider {
+  }
+  &__edu-exp-wrapper {
+  }
+}
+
+.edu-exp-wrapper {
+  &__headline {
+  }
+}
+
+.orange-circles-structure {
+  &__small-circle {
+  }
+  &__all-lines-wrapper {
+    .orange-circles-structure__vertical-line {
+    }
+    .orange-circles-structure__horizontal-lines-wrapper {
+      .orange-circles-structure__horizontal-line {
+      }
+      .orange-circles-structure__big-circle {
+      }
+    }
+  }
+}
+
+.edu-exp-info-card {
+  &__icon-head-info-wrapper {
+    .edu-exp-info-card__icon {
+    }
+    .edu-exp-info-card__head-info-wrapper {
+      .edu-exp-info-card__head-info-main {
+      }
+      .edu-exp-info-card__head-info-additional {
+      }
+    }
+    .edu-exp-info-card__text {
+    }
+  }
+}
+
+.contacts-section {
+  &__img {
+  }
+  &__info-wrapper {
+    .contacts-section__contacts-label {
+    }
+    .contacts-section__contact-me-label {
+    }
+    .contacts-section__orange-line {
+    }
+    .contacts-section__simple-label {
+    }
+    .contacts-section__socials-list {
+      .contacts-section__social-item {
+        .contacts-section__social-link {
+        }
+        .contacts-section__social-link_facebook {
+        }
+        .contacts-section__social-link_telegram {
+        }
+        .contacts-section__social-link_insta {
+        }
+      }
+    }
+    .contacts-section__contact-form {
+      .contacts-section__name-mail-wrapper {
+      }
+      .contacts-section__privacy-policy-wrapper {
+        .contacts-section__privacy-policy-checkbox {
+        }
+        .contacts-section__privacy-policy-label {
+          .contacts-section__privacy-policy-link {
+          }
+        }
+      }
+      .contacts-section__contact-form-submit-btn {
+      }
+    }
+  }
+}
+
+.form-input-wrapper {
+  &__label {
+  }
+  &__input {
+  }
+}
+
+.form-textarea-wrapper {
+  &__label {
+  }
+  &__textarea {
+  }
+}

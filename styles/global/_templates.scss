@@ -1,3 +1,56 @@
 @import "./vars";
 
-// Here will be default settings for some container
+// Default settings of container for content (paddings and margin-bottom are possible)
+%default-container {
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 0;
+  margin-inline: auto;
+}
+
+// Default settings of headlines; $f-s - size; $l-h - line height
+@mixin default-h($f-s, $l-h) {
+  font-family: $font-poppins;
+  font-size: $f-s;
+  line-height: $l-h;
+  font-weight: bold;
+  color: $color-black;
+}
+
+// Default settings of paragraphs; $f-s - size; $l-h - line height
+@mixin default-p($f-s, $l-h) {
+  font-family: $font-poppins;
+  font-size: $f-s;
+  line-height: $l-h;
+  color: $color-black;
+}
+
+// Default settings of links; $f-s - size; $l-h - line height; $c - color
+@mixin default-a($f-s, $l-h, $c) {
+  font-family: $font-poppins;
+  font-size: $f-s;
+  line-height: $l-h;
+  color: $c;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+// Default settings of buttons; $m-w - max width; $bg-c - background color
+@mixin default-btn($m-w, $bg-c) {
+  max-width: $m-w;
+  width: 100%;
+  padding: 12px 26px;
+  font-family: $font-poppins;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: $color-black;
+  background-color: $bg-c;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.05);
+    color: $color-orange;
+  }
+}

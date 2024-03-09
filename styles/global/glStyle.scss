@@ -4,6 +4,13 @@
 @import "../main/main";
 @import "../footer/footer";
 
+// Global container of whole page
+.global-container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 // This class is needed to hide elements (by adding this class)
 .hidden-element {
   display: none !important;
@@ -12,4 +19,32 @@
 // This class is needed to make elements appear (by adding this class)
 .appeared-flex {
   display: flex !important;
+}
+
+.socials-list {
+  &__item {
+    .socials-list__item-link {
+    }
+    .socials-list__item-link_github {
+    }
+    .socials-list__item-link_insta {
+    }
+    .socials-list__item-link_facebook {
+    }
+  }
+}
+
+.burger-menu {
+  &__nav-and-socials-wrapper {
+    .burger-menu__close-btn {
+    }
+    .burger-menu__nav {
+      .burger-menu__nav-list {
+        .burger-menu__nav-list-item {
+          .burger-menu__link {
+          }
+        }
+      }
+    }
+  }
 }
