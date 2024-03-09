@@ -17,9 +17,14 @@
   display: none !important;
 }
 
-// This class is needed to make elements appear (by adding this class)
+// This class is needed to make flex elements appear (by adding this class)
 .appeared-flex {
   display: flex !important;
+}
+
+// This class is needed to make block elements appear (by adding this class)
+.appeared-block {
+  display: block !important;
 }
 
 .socials-list {
@@ -33,23 +38,23 @@
       width: 20px;
       height: 20px;
       transition: 0.3s;
-    }
-    .socials-list__item-link_github {
-      background-image: url("../../images/icon-github.svg");
-      &:hover {
-        transform: scale(1.1);
+      &_github {
+        background-image: url("../../images/icon-github.svg");
+        &:hover {
+          transform: scale(1.1);
+        }
       }
-    }
-    .socials-list__item-link_insta {
-      background-image: url("../../images/icon-instagram.svg");
-      &:hover {
-        transform: scale(1.1);
+      &_insta {
+        background-image: url("../../images/icon-instagram.svg");
+        &:hover {
+          transform: scale(1.1);
+        }
       }
-    }
-    .socials-list__item-link_facebook {
-      background-image: url("../../images/icon-facebook.svg");
-      &:hover {
-        transform: scale(1.1);
+      &_facebook {
+        background-image: url("../../images/icon-facebook.svg");
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

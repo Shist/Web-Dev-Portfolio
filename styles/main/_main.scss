@@ -207,58 +207,206 @@
   @extend %default-container;
   padding: 120px 35px 91px 52px;
   display: flex;
+  column-gap: 68px;
   border-inline: 1px solid $color-black;
   border-bottom: 1px solid $color-black;
   &__img {
+    width: 400px;
+    height: 600px;
   }
   &__info-wrapper {
+    flex-grow: 1;
+    padding-top: 6px;
+    display: flex;
+    flex-direction: column;
     .contacts-section__contacts-label {
+      position: relative;
+      z-index: 1;
+      padding-left: 12px;
+      margin-bottom: 6px;
+      @include default-headline(16px, 24px);
+      &::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 0;
+        z-index: -1;
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: $color-orange;
+      }
     }
     .contacts-section__contact-me-label {
+      margin-bottom: 4px;
+      @include default-headline(36px, 60px);
     }
     .contacts-section__orange-line {
+      margin-bottom: 20px;
+      width: 60px;
+      height: 3px;
+      background-color: $color-orange;
     }
     .contacts-section__simple-label {
+      margin-bottom: 20px;
+      @include default-headline(14px, 21px);
     }
     .contacts-section__socials-list {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start;
       .contacts-section__social-item {
+        width: 30px;
+        height: 30px;
+        &_facebook {
+          margin-right: 25px;
+        }
+        &_telegram {
+          margin-right: 20px;
+        }
         .contacts-section__social-link {
-        }
-        .contacts-section__social-link_facebook {
-        }
-        .contacts-section__social-link_telegram {
-        }
-        .contacts-section__social-link_insta {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          transition: 0.3s;
+          &_facebook {
+            background-image: url("../../images/icon-contact-facebook.svg");
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          &_telegram {
+            background-image: url("../../images/icon-contact-telegram.svg");
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          &_insta {
+            background-image: url("../../images/icon-contact-instagram.svg");
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
         }
       }
     }
     .contacts-section__contact-form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
       .contacts-section__name-mail-wrapper {
-      }
-      .contacts-section__privacy-policy-wrapper {
-        .contacts-section__privacy-policy-checkbox {
-        }
-        .contacts-section__privacy-policy-label {
-          .contacts-section__privacy-policy-link {
-          }
-        }
+        display: flex;
+        column-gap: 25px;
       }
       .contacts-section__contact-form-submit-btn {
+        @include default-btn(220px, $color-orange);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
       }
     }
   }
 }
 
 .form-input-wrapper {
+  flex-grow: 1;
+  position: relative;
   &__label {
+    position: absolute;
+    top: -9px;
+    left: 12px;
+    padding-inline: 8px;
+    background-color: $color-white;
+    @include default-text(12px, 18px);
   }
   &__input {
+    max-width: 280px;
+    width: 100%;
+    padding: 12px 18px;
+    @include default-text(12px, 18px);
+    border: 1px solid $color-black;
+    &::placeholder {
+      @include default-text(12px, 18px);
+    }
   }
 }
 
 .form-textarea-wrapper {
+  position: relative;
   &__label {
+    position: absolute;
+    top: -9px;
+    left: 12px;
+    padding-inline: 8px;
+    background-color: $color-white;
+    @include default-text(12px, 18px);
   }
   &__textarea {
+    max-width: 585px;
+    width: 100%;
+    min-height: 190px;
+    padding: 12px 18px;
+    @include default-text(12px, 18px);
+    border: 1px solid $color-black;
+    resize: none;
+    &::placeholder {
+      @include default-text(12px, 18px);
+    }
+  }
+}
+
+.privacy-policy-label {
+  position: relative;
+  display: none;
+  padding-left: 21px;
+  margin-bottom: 20px;
+  @include default-text(12px, 18px);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &__checkbox {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  &__checkmark {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    height: 11px;
+    width: 11px;
+    border: 1px solid $color-black;
+    background-color: $color-white;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  &:hover &__checkbox ~ &__checkmark {
+    background-color: $color-light-gray;
+  }
+  & &__checkbox:checked ~ &__checkmark {
+    background-color: $color-blue;
+  }
+  & &__checkbox:checked ~ &__checkmark:after {
+    display: block;
+  }
+  & &__checkmark:after {
+    left: 3px;
+    top: 1px;
+    width: 2px;
+    height: 4px;
+    border: solid $color-white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  &__link {
+    @include default-link(12px, 18px, $color-dark-blue);
   }
 }
