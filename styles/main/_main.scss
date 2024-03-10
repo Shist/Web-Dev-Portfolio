@@ -179,6 +179,9 @@
     flex-direction: column;
     row-gap: 45px;
     border-left: 1px solid $color-black;
+    @media (max-width: $phone-l) {
+      row-gap: 10px;
+    }
     .chapter-wrapper__small-circle {
       position: absolute;
       top: -21px;

@@ -364,6 +364,11 @@
   row-gap: 45px;
   border-left: 1px solid #000000;
 }
+@media (max-width: 480px) {
+  .chapter-wrapper__cards-wrapper {
+    row-gap: 10px;
+  }
+}
 .chapter-wrapper__cards-wrapper .chapter-wrapper__small-circle {
   position: absolute;
   top: -21px;
