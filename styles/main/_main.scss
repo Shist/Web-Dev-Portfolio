@@ -44,7 +44,7 @@
     }
     .main-info-section__name-signature-text {
       position: relative;
-      z-index: 1;
+      z-index: 0;
       padding-left: 10px;
       margin-bottom: 9px;
       @include default-headline(16px, 24px);
@@ -106,7 +106,7 @@
   }
   &__experience-label {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     margin-bottom: 6px;
     @include default-headline(16px, 24px);
     @media (max-width: $phone-l) {
@@ -172,7 +172,7 @@
   }
   &__cards-wrapper {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     padding-top: 45px;
     padding-left: 43px;
     display: flex;
@@ -203,7 +203,7 @@
 
 .edu-exp-info-card {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -294,7 +294,7 @@
     flex-direction: column;
     .contacts-section__contacts-label {
       position: relative;
-      z-index: 1;
+      z-index: 0;
       padding-left: 12px;
       margin-bottom: 6px;
       @include default-headline(16px, 24px);
@@ -411,14 +411,29 @@
     padding-inline: 8px;
     background-color: $color-white;
     @include default-text(12px, 18px);
+    &_name {
+      z-index: 5;
+    }
+    &_mail {
+      z-index: 3;
+    }
   }
-  &__input {
-    width: 100%;
-    padding: 12px 18px;
-    @include default-text(12px, 18px);
-    border: 1px solid $color-black;
-    &::placeholder {
+  &__field-wrapper {
+    position: relative;
+    &_name {
+      z-index: 4;
+    }
+    &_mail {
+      z-index: 2;
+    }
+    .form-input-wrapper__input {
+      width: 100%;
+      padding: 12px 18px;
       @include default-text(12px, 18px);
+      border: 1px solid $color-black;
+      &::placeholder {
+        @include default-text(12px, 18px);
+      }
     }
   }
 }
@@ -427,24 +442,29 @@
   position: relative;
   &__label {
     position: absolute;
+    z-index: 1;
     top: -9px;
     left: 12px;
     padding-inline: 8px;
     background-color: $color-white;
     @include default-text(12px, 18px);
   }
-  &__textarea {
-    width: 100%;
-    min-height: 190px;
-    padding: 12px 18px;
-    @include default-text(12px, 18px);
-    border: 1px solid $color-black;
-    resize: none;
-    @media (max-width: $phone-l) {
-      min-height: 143px;
-    }
-    &::placeholder {
+  &__field-wrapper {
+    position: relative;
+    z-index: 0;
+    .form-textarea-wrapper__textarea {
+      width: 100%;
+      min-height: 190px;
+      padding: 12px 18px;
       @include default-text(12px, 18px);
+      border: 1px solid $color-black;
+      resize: none;
+      @media (max-width: $phone-l) {
+        min-height: 143px;
+      }
+      &::placeholder {
+        @include default-text(12px, 18px);
+      }
     }
   }
 }

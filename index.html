@@ -228,38 +228,62 @@
             <form action="#" class="contacts-section__contact-form">
               <div class="contacts-section__name-mail-wrapper">
                 <div class="form-input-wrapper">
-                  <label for="contact-name" class="form-input-wrapper__label">
+                  <label
+                    for="contact-name"
+                    class="form-input-wrapper__label form-input-wrapper__label_name"
+                  >
                     Ваше имя
                   </label>
-                  <input
-                    type="text"
-                    placeholder="Иван"
-                    name="contact-name"
-                    id="contact-name"
-                    class="form-input-wrapper__input"
-                  />
+                  <div
+                    class="form-input-wrapper__field-wrapper form-input-wrapper__field-wrapper_name"
+                    id="contact-name-wrapper"
+                    data-error-msg="No errors"
+                  >
+                    <input
+                      type="text"
+                      placeholder="Иван"
+                      name="contact-name"
+                      id="contact-name"
+                      class="form-input-wrapper__input"
+                    />
+                  </div>
                 </div>
                 <div class="form-input-wrapper">
-                  <label for="contact-name" class="form-input-wrapper__label">
+                  <label
+                    for="contact-name"
+                    class="form-input-wrapper__label form-input-wrapper__label_mail"
+                  >
                     Ваша почта
                   </label>
-                  <input
-                    type="email"
-                    name="contact-email"
-                    id="contact-email"
-                    class="form-input-wrapper__input"
-                  />
+                  <div
+                    class="form-input-wrapper__field-wrapper form-input-wrapper__field-wrapper_mail"
+                    id="contact-email-wrapper"
+                    data-error-msg="No errors"
+                  >
+                    <input
+                      type="email"
+                      name="contact-email"
+                      id="contact-email"
+                      class="form-input-wrapper__input"
+                    />
+                  </div>
                 </div>
               </div>
               <div class="form-textarea-wrapper">
                 <label for="contact-msg" class="form-textarea-wrapper__label">
                   Ваше сообщение
                 </label>
-                <textarea
-                  name="contact-msg"
-                  id="contact-msg"
-                  class="form-textarea-wrapper__textarea"
-                ></textarea>
+                <div
+                  class="form-textarea-wrapper__field-wrapper"
+                  id="contact-msg-wrapper"
+                  data-error-msg="No errors"
+                >
+                  <textarea
+                    name="contact-msg"
+                    id="contact-msg"
+                    class="form-textarea-wrapper__textarea"
+                  ></textarea>
+                </div>
               </div>
               <label for="policy-agreement" class="privacy-policy-label">
                 <input

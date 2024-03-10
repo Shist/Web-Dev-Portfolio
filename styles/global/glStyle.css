@@ -122,7 +122,7 @@
 }
 .main-info-section__person-info-wrapper .main-info-section__name-signature-text {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   padding-left: 10px;
   margin-bottom: 9px;
   font-family: "OpenSans";
@@ -234,7 +234,7 @@
 }
 .utility-section__experience-label {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   margin-bottom: 6px;
   font-family: "OpenSans";
   font-size: 16px;
@@ -324,7 +324,7 @@
 }
 .chapter-wrapper__cards-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   padding-top: 45px;
   padding-left: 43px;
   display: flex;
@@ -354,7 +354,7 @@
 
 .edu-exp-info-card {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -470,7 +470,7 @@
 }
 .contacts-section__info-wrapper .contacts-section__contacts-label {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   padding-left: 12px;
   margin-bottom: 6px;
   font-family: "OpenSans";
@@ -639,7 +639,22 @@
   font-weight: 500;
   color: #000000;
 }
-.form-input-wrapper__input {
+.form-input-wrapper__label_name {
+  z-index: 5;
+}
+.form-input-wrapper__label_mail {
+  z-index: 3;
+}
+.form-input-wrapper__field-wrapper {
+  position: relative;
+}
+.form-input-wrapper__field-wrapper_name {
+  z-index: 4;
+}
+.form-input-wrapper__field-wrapper_mail {
+  z-index: 2;
+}
+.form-input-wrapper__field-wrapper .form-input-wrapper__input {
   width: 100%;
   padding: 12px 18px;
   font-family: "OpenSans";
@@ -649,7 +664,7 @@
   color: #000000;
   border: 1px solid #000000;
 }
-.form-input-wrapper__input::placeholder {
+.form-input-wrapper__field-wrapper .form-input-wrapper__input::placeholder {
   font-family: "OpenSans";
   font-size: 12px;
   line-height: 18px;
@@ -662,6 +677,7 @@
 }
 .form-textarea-wrapper__label {
   position: absolute;
+  z-index: 1;
   top: -9px;
   left: 12px;
   padding-inline: 8px;
@@ -672,7 +688,11 @@
   font-weight: 500;
   color: #000000;
 }
-.form-textarea-wrapper__textarea {
+.form-textarea-wrapper__field-wrapper {
+  position: relative;
+  z-index: 0;
+}
+.form-textarea-wrapper__field-wrapper .form-textarea-wrapper__textarea {
   width: 100%;
   min-height: 190px;
   padding: 12px 18px;
@@ -685,11 +705,11 @@
   resize: none;
 }
 @media (max-width: 480px) {
-  .form-textarea-wrapper__textarea {
+  .form-textarea-wrapper__field-wrapper .form-textarea-wrapper__textarea {
     min-height: 143px;
   }
 }
-.form-textarea-wrapper__textarea::placeholder {
+.form-textarea-wrapper__field-wrapper .form-textarea-wrapper__textarea::placeholder {
   font-family: "OpenSans";
   font-size: 12px;
   line-height: 18px;
@@ -796,6 +816,31 @@
   display: block !important;
 }
 
+.error-field-wrapper:focus-within::after {
+  opacity: 1;
+}
+
+.error-field-wrapper::after {
+  content: attr(data-error-msg);
+  padding: 2px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  max-width: 100%;
+  font-family: "OpenSans";
+  color: #000000;
+  background-color: #ffdfe3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.error-field {
+  border: 3px solid #ff0000 !important;
+}
+
 .socials-list {
   display: flex;
   column-gap: 15px;
@@ -836,7 +881,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 10;
   display: flex;
   min-width: 100vw;
   min-height: 100vh;
@@ -889,7 +934,6 @@
 }
 .burger-menu__nav-and-socials-wrapper .burger-menu__nav .burger-menu__nav-list .burger-menu__nav-list-item {
   position: relative;
-  z-index: 1;
   padding-left: 36px;
   transition: 0.3s;
 }
@@ -898,7 +942,6 @@
   position: absolute;
   top: 9px;
   left: 0;
-  z-index: -1;
   display: block;
   width: 16px;
   height: 16px;
