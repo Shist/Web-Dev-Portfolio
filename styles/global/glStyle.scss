@@ -30,6 +30,9 @@
 .socials-list {
   display: flex;
   column-gap: 15px;
+  &_burger-menu {
+    align-self: center;
+  }
   &__item {
     width: 20px;
     height: 20px;
@@ -61,13 +64,88 @@
 }
 
 .burger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.75);
   &__nav-and-socials-wrapper {
+    position: relative;
+    padding-block: 140px 50px;
+    max-width: 345px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color-orange;
+    @media (max-width: $phone-l) {
+      max-width: 250px;
+    }
     .burger-menu__close-btn {
+      position: absolute;
+      top: 24px;
+      right: 25px;
+      width: 40px;
+      height: 40px;
+      background: url(../../images/icon-close-burger-menu.svg) $color-orange
+        center/29px 29px no-repeat;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.1);
+        filter: brightness(110%);
+      }
     }
     .burger-menu__nav {
+      padding-left: 40px;
+      @media (max-width: $phone-l) {
+        padding-left: 20px;
+      }
       .burger-menu__nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 15px;
         .burger-menu__nav-list-item {
+          position: relative;
+          z-index: 1;
+          padding-left: 36px;
+          transition: 0.3s;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 0;
+            z-index: -1;
+            display: block;
+            width: 16px;
+            height: 16px;
+            border: 1px solid $color-black;
+            border-radius: 50%;
+          }
+          &:hover {
+            transform: scale(1.1);
+            .burger-menu__link {
+              color: $color-light-yellow;
+            }
+          }
+          &:hover::before {
+            background-color: $color-light-yellow;
+            border: 1px solid $color-light-yellow;
+          }
           .burger-menu__link {
+            font-family: $font-opensans;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: bold;
+            color: $color-white;
+            text-decoration: none;
+            transition: 0.3s;
           }
         }
       }
