@@ -116,7 +116,7 @@
       right: 25px;
       width: 40px;
       height: 40px;
-      background: url(../../images/icon-close-burger-menu.svg) $color-orange
+      background: url("../../images/icon-close-btn.svg") $color-orange
         center/29px 29px no-repeat;
       border: none;
       border-radius: 5px;
@@ -171,6 +171,96 @@
             text-decoration: none;
             transition: 0.3s;
           }
+        }
+      }
+    }
+  }
+}
+
+.modal-window {
+  padding: 20px;
+  position: fixed;
+  z-index: 10;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  &__wrapper {
+    padding: 20px;
+    position: relative;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    background-color: $color-light-blue;
+    border-radius: 10px;
+    @media (max-width: $phone-l) {
+      padding: 10px;
+    }
+    .modal-window__close-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 30px;
+      height: 30px;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+      background: url("../../images/icon-close-btn.svg") transparent center/29px
+        29px no-repeat;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .modal-window__headline {
+      padding: 8px 30px;
+      text-align: center;
+      @include default-headline(30px, 36px);
+      @media (max-width: $tablet-l) {
+        font-size: 26px;
+        line-height: 30px;
+      }
+      @media (max-width: $phone-l) {
+        font-size: 20px;
+        line-height: 22px;
+      }
+      @media (max-width: $phone-m) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+    .modal-window__text {
+      padding: 4px;
+      text-align: center;
+      @include default-text(24px, 30px);
+      @media (max-width: $tablet-l) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+      @media (max-width: $phone-l) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      @media (max-width: $phone-m) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    .modal-window__btns-wrapper {
+      align-self: normal;
+      display: flex;
+      justify-content: space-evenly;
+      column-gap: 20px;
+      .modal-window__btn {
+        @include default-btn(200px, $color-orange);
+        @media (max-width: $phone-m) {
+          font-size: 10px;
+          line-height: 14px;
         }
       }
     }

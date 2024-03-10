@@ -1,82 +1,76 @@
 "use strict";
 
-function addErrorToInput(input, inputWrapper, errorMsg) {
-  input.classList.add("error-field");
-  inputWrapper.dataset["errorMsg"] = errorMsg;
-  inputWrapper.classList.add("error-field-wrapper");
+import validateForm from "./validateForm.js";
+
+function showModalWindow(modalSelector) {
+  const modalWindow = document.querySelector(modalSelector);
+
+  modalWindow.classList.remove("hidden-element");
+  modalWindow.classList.add("appeared-flex");
 }
 
-function removeErrorFromInput(input, inputWrapper) {
-  input.classList.remove("error-field");
-  inputWrapper.dataset["errorMsg"] = "No errors";
-  inputWrapper.classList.remove("error-field-wrapper");
+function hideModalWindow(modalSelector) {
+  const modalWindow = document.querySelector(modalSelector);
+
+  modalWindow.classList.remove("appeared-flex");
+  modalWindow.classList.add("hidden-element");
 }
 
-function validateName() {
-  const inputNameWrapper = document.querySelector("#contact-name-wrapper");
-  const inputName = document.querySelector("#contact-name");
+function setModalListeners() {
+  const modalPrivacyPolicy = document.querySelector("#modal-privacy-policy");
+  const btnCloseModalPolicy = document.querySelector(
+    "#modal-privacy-policy-close-btn"
+  );
+  const btnDisagreePolicy = document.querySelector(
+    "#modal-privacy-policy-cancel-btn"
+  );
 
-  if (!inputName.value) {
-    addErrorToInput(inputName, inputNameWrapper, "Укажите имя");
-    return false;
-  } else if (inputName.value.length > 32) {
-    addErrorToInput(inputName, inputNameWrapper, "Максимум 32 символа");
-    return false;
-  } else {
-    removeErrorFromInput(inputName, inputNameWrapper);
-    return true;
-  }
+  btnCloseModalPolicy.addEventListener("click", () =>
+    hideModalWindow("#modal-privacy-policy")
+  );
+
+  btnDisagreePolicy.addEventListener("click", () =>
+    hideModalWindow("#modal-privacy-policy")
+  );
+
+  // Event while clicking on dark space around modal window
+  modalPrivacyPolicy.addEventListener("click", (event) => {
+    if (event.target === modalPrivacyPolicy) {
+      hideModalWindow("#modal-privacy-policy");
+    }
+  });
 }
 
-function validateEmail() {
-  const inputEmailWrapper = document.querySelector("#contact-email-wrapper");
-  const inputEmail = document.querySelector("#contact-email");
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+function sendData() {
+  const form = document.querySelector(".contacts-section__contact-form");
 
-  if (!inputEmail.value) {
-    addErrorToInput(inputEmail, inputEmailWrapper, "Укажите почту");
-    return false;
-  } else if (!emailRegex.test(inputEmail.value)) {
-    addErrorToInput(inputEmail, inputEmailWrapper, "Некорректная почта");
-    return false;
-  } else {
-    removeErrorFromInput(inputEmail, inputEmailWrapper);
-    return true;
-  }
-}
-
-function validateMsg() {
-  const inputMsgWrapper = document.querySelector("#contact-msg-wrapper");
-  const inputMsg = document.querySelector("#contact-msg");
-
-  if (!inputMsg.value) {
-    addErrorToInput(inputMsg, inputMsgWrapper, "Укажите сообщение");
-    return false;
-  } else if (inputMsg.value.length > 1000) {
-    addErrorToInput(inputMsg, inputMsgWrapper, "Максимум 1000 символов");
-    return false;
-  } else {
-    removeErrorFromInput(inputMsg, inputMsgWrapper);
-    return true;
-  }
-}
-
-function validateForm() {
-  const nameIsOk = validateName();
-  const emailIsOk = validateEmail();
-  const msgIsOk = validateMsg();
-
-  return nameIsOk && emailIsOk && msgIsOk;
+  form.reset();
+  window.alert("Success!");
 }
 
 function formSubmit() {
   const form = document.querySelector(".contacts-section__contact-form");
+  const checkboxPolicy = document.querySelector("#policy-agreement");
+  const btnAgreePolicy = document.querySelector(
+    "#modal-privacy-policy-agree-btn"
+  );
+
+  setModalListeners();
+
+  btnAgreePolicy.addEventListener("click", () => {
+    hideModalWindow("#modal-privacy-policy");
+    sendData();
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     if (validateForm()) {
-      form.reset();
-      window.alert("Success!");
+      if (checkboxPolicy.checked) {
+        sendData();
+      } else {
+        showModalWindow("#modal-privacy-policy");
+      }
     }
   });
 }
