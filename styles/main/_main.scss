@@ -66,6 +66,7 @@
       max-width: 530px;
       @include default-headline(48px, 60px);
       @media (max-width: $phone-l) {
+        margin-bottom: 32px;
         font-size: 26px;
         line-height: 39px;
       }
@@ -108,6 +109,9 @@
     z-index: 1;
     margin-bottom: 6px;
     @include default-headline(16px, 24px);
+    @media (max-width: $phone-l) {
+      margin-bottom: 26px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -129,12 +133,18 @@
       font-size: 24px;
       line-height: 36px;
     }
+    @media (max-width: $phone-l) {
+      margin-bottom: 15px;
+    }
   }
   &__divider {
     margin-bottom: 60px;
     width: 60px;
     height: 3px;
     background-color: $color-orange;
+    @media (max-width: $phone-l) {
+      margin-bottom: 40px;
+    }
   }
   &__chapters-wrapper {
     align-self: normal;
@@ -198,6 +208,9 @@
   flex-direction: column;
   align-items: flex-start;
   row-gap: 12px;
+  @media (max-width: $phone-l) {
+    row-gap: 10px;
+  }
   &__horizontal-line {
     position: absolute;
     top: 18px;
@@ -260,15 +273,17 @@
     border: none;
   }
   @media (max-width: $tablet-l) {
-    padding-top: 80px;
+    padding-block: 80px 70px;
+    padding-inline: 40px;
   }
   @media (max-width: $phone-l) {
-    padding-top: 40px;
+    padding-block: 40px 50px;
+    padding-inline: 10px;
   }
   &__img {
     width: 400px;
     height: 600px;
-    @media (max-width: $tablet-l) {
+    @media (max-width: $laptop-l) {
       display: none;
     }
   }
@@ -283,6 +298,9 @@
       padding-left: 12px;
       margin-bottom: 6px;
       @include default-headline(16px, 24px);
+      @media (max-width: $phone-l) {
+        margin-bottom: 26px;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -299,6 +317,10 @@
     .contacts-section__contact-me-label {
       margin-bottom: 4px;
       @include default-headline(36px, 60px);
+      @media (max-width: $phone-l) {
+        margin-bottom: 15px;
+        @include default-headline(24px, 36px);
+      }
     }
     .contacts-section__orange-line {
       margin-bottom: 20px;
@@ -306,7 +328,7 @@
       height: 3px;
       background-color: $color-orange;
     }
-    .contacts-section__simple-label {
+    .contacts-section__any-way-label {
       margin-bottom: 20px;
       @include default-headline(14px, 21px);
     }
@@ -349,17 +371,31 @@
         }
       }
     }
+    .contacts-section__leave-data-label {
+      margin-bottom: 30px;
+      @include default-headline(14px, 21px);
+    }
     .contacts-section__contact-form {
       display: flex;
       flex-direction: column;
       row-gap: 30px;
+      @media (max-width: $phone-l) {
+        row-gap: 20px;
+      }
       .contacts-section__name-mail-wrapper {
         display: flex;
         column-gap: 25px;
+        row-gap: 20px;
+        @media (max-width: $phone-l) {
+          flex-direction: column;
+        }
       }
       .contacts-section__contact-form-submit-btn {
         @include default-btn(220px, $color-orange);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+        @media (max-width: $phone-l) {
+          align-self: center;
+        }
       }
     }
   }
@@ -377,7 +413,6 @@
     @include default-text(12px, 18px);
   }
   &__input {
-    max-width: 280px;
     width: 100%;
     padding: 12px 18px;
     @include default-text(12px, 18px);
@@ -399,13 +434,15 @@
     @include default-text(12px, 18px);
   }
   &__textarea {
-    max-width: 585px;
     width: 100%;
     min-height: 190px;
     padding: 12px 18px;
     @include default-text(12px, 18px);
     border: 1px solid $color-black;
     resize: none;
+    @media (max-width: $phone-l) {
+      min-height: 143px;
+    }
     &::placeholder {
       @include default-text(12px, 18px);
     }
@@ -413,8 +450,10 @@
 }
 
 .privacy-policy-label {
+  align-self: center;
   position: relative;
   display: none;
+  max-width: 180px;
   padding-left: 21px;
   @include default-text(12px, 18px);
   cursor: pointer;
@@ -422,8 +461,8 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  &_contacts {
-    margin-bottom: 20px;
+  @media (max-width: $phone-l) {
+    display: block;
   }
   &__checkbox {
     position: absolute;
