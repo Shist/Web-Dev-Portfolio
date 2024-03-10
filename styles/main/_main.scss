@@ -150,72 +150,73 @@
 }
 
 .chapter-wrapper {
-  position: relative;
-  z-index: 1;
-  padding-left: 50px;
   max-width: 425px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  row-gap: 45px;
+  @media (max-width: $phone-l) {
+    padding-left: 8px;
+  }
   &__headline {
+    padding-left: 43px;
     @include default-headline(20px, 30px);
   }
-}
-
-.orange-circles-structure {
-  position: absolute;
-  top: 9px;
-  left: 0;
-  z-index: -1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  &__small-circle {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: $color-orange;
-  }
-  &__all-structures-wrapper {
-    padding-left: 7px;
+  &__cards-wrapper {
+    position: relative;
+    z-index: 1;
+    padding-top: 45px;
+    padding-left: 43px;
     display: flex;
-    align-items: flex-start;
-    .orange-circles-structure__vertical-line {
-      width: 1px;
-      height: 343px;
-      background-color: $color-black;
+    flex-direction: column;
+    row-gap: 45px;
+    border-left: 1px solid $color-black;
+    .chapter-wrapper__small-circle {
+      position: absolute;
+      top: -21px;
+      left: -8px;
+      z-index: -1;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $color-orange;
     }
-    .orange-circles-structure__all-horizontal-structures-wrapper {
-      padding-top: 51px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      row-gap: 138px;
-      .orange-circles-structure__horisontal-structure-wrapper {
-        display: flex;
-        align-items: center;
-        .orange-circles-structure__horizontal-line {
-          width: 42px;
-          height: 1px;
-          background-color: $color-black;
-        }
-        .orange-circles-structure__big-circle {
-          width: 36px;
-          height: 36px;
-          border-radius: 50%;
-          background-color: $color-orange;
-        }
-      }
+    .chapter-wrapper__small-vertical-line {
+      position: absolute;
+      top: -6px;
+      left: -1px;
+      z-index: -2;
+      width: 1px;
+      height: 6px;
+      background-color: $color-black;
     }
   }
 }
 
 .edu-exp-info-card {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   row-gap: 12px;
+  &__horizontal-line {
+    position: absolute;
+    top: 18px;
+    left: -43px;
+    z-index: -2;
+    width: 43px;
+    height: 1px;
+    background-color: $color-black;
+  }
+  &__big-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $color-orange;
+  }
   &__icon-head-info-wrapper {
     display: flex;
     align-items: flex-start;
@@ -239,9 +240,12 @@
     }
   }
   &__text {
-    padding-right: 21px;
-    padding-bottom: 4px;
+    padding-right: 28px;
+    padding-bottom: 5px;
     @include default-text(12px, 18px);
+    @media (max-width: $tablet-l) {
+      padding: 4px;
+    }
   }
 }
 
