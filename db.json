@@ -1,3 +1,10 @@
 {
-  "requests": []
+  "requests": [
+    {
+      "id": "90bd",
+      "name": "Pavel",
+      "mail": "pavel.zhukouski041@gmail.com",
+      "message": "Testing sending a message..."
+    }
+  ]
 }

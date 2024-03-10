@@ -1,6 +1,7 @@
 "use strict";
 
 import validateForm from "./validateForm.js";
+import sendRequest from "./sendRequest.js";
 
 function showModalWindow(modalSelector) {
   const modalWindow = document.querySelector(modalSelector);
@@ -43,9 +44,37 @@ function setModalListeners() {
 
 function sendData() {
   const form = document.querySelector(".contacts-section__contact-form");
+  const submitBtn = document.querySelector(
+    ".contacts-section__contact-form-submit-btn"
+  );
+  const msgWrapper = document.querySelector(".contacts-section__msg-wrapper");
+  const inputName = document.querySelector("#contact-name");
+  const inputEmail = document.querySelector("#contact-email");
+  const inputMsg = document.querySelector("#contact-msg");
 
-  form.reset();
-  window.alert("Success!");
+  submitBtn.disabled = true;
+  msgWrapper.innerHTML = "";
+  msgWrapper.insertAdjacentHTML("afterbegin", '<div class="spinner"></div>');
+
+  sendRequest(inputName.value, inputEmail.value, inputMsg.value)
+    .then(() => {
+      form.reset();
+      msgWrapper.insertAdjacentHTML(
+        "afterbegin",
+        '<div class="success-msg">Ваши данные успешно отправлены!</div>'
+      );
+    })
+    .catch((error) => {
+      const errorMsg = `Ошибка во время отправки данных. ${error}`;
+      msgWrapper.insertAdjacentHTML(
+        "afterbegin",
+        `<div class="fail-msg">${errorMsg}</div>`
+      );
+    })
+    .finally(() => {
+      msgWrapper.querySelector(".spinner").remove();
+      submitBtn.disabled = false;
+    });
 }
 
 function formSubmit() {

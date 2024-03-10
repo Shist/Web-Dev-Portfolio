@@ -21,6 +21,14 @@
   margin-inline: auto;
 }
 
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .contacts-section, .utility-section, .main-info-section__person-info-wrapper {
   max-width: 1140px;
   width: 100%;
@@ -28,6 +36,14 @@
   margin-inline: auto;
 }
 
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .header {
   position: absolute;
   top: 0;
@@ -66,6 +82,14 @@
   margin-inline: auto;
 }
 
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .main-info-section {
   position: relative;
   min-height: 800px;
@@ -185,6 +209,10 @@
   background-color: #ffa501;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
+.main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-portfolio:disabled {
+  transform: none;
+  filter: grayscale(0.5) brightness(0.75);
+}
 .main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-about-me {
   max-width: 135px;
   width: 100%;
@@ -205,6 +233,10 @@
   filter: brightness(110%);
   background-color: #ffa501;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+.main-info-section__person-info-wrapper .main-info-section__btns-wrapper .main-info-section__btn-about-me:disabled {
+  transform: none;
+  filter: grayscale(0.5) brightness(0.75);
 }
 
 .utility-section {
@@ -595,7 +627,18 @@
     flex-direction: column;
   }
 }
-.contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__contact-form-submit-btn {
+.contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 480px) {
+  .contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper {
+    flex-direction: column;
+  }
+}
+.contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper .contacts-section__contact-form-submit-btn {
+  min-width: 220px;
   max-width: 220px;
   width: 100%;
   padding: 12px 26px;
@@ -611,15 +654,61 @@
   transition: 0.3s;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
-.contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__contact-form-submit-btn:hover {
+.contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper .contacts-section__contact-form-submit-btn:hover {
   transform: scale(1.05);
   filter: brightness(110%);
   background-color: #ffa501;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
+.contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper .contacts-section__contact-form-submit-btn:disabled {
+  transform: none;
+  filter: grayscale(0.5) brightness(0.75);
+}
+.contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper .contacts-section__msg-wrapper .spinner {
+  --size: 40px;
+  --color: #ffa501;
+  --animation-timing-function: linear;
+  --animation-duration: 2s;
+  width: var(--size);
+  height: var(--size);
+  mask-image: radial-gradient(circle at 50% 50%, transparent calc(var(--size) / 4), black calc(var(--size) / 4));
+  background-image: conic-gradient(from 0deg, var(--color) 0deg, var(--color) 10deg, transparent 10deg, transparent 30deg, var(--color) 30deg, var(--color) 50deg, transparent 50deg, transparent 70deg, var(--color) 70deg, var(--color) 90deg, transparent 90deg, transparent 110deg, var(--color) 110deg, var(--color) 130deg, transparent 130deg, transparent 150deg, var(--color) 150deg, var(--color) 170deg, transparent 170deg, transparent 190deg, var(--color) 190deg, var(--color) 210deg, transparent 210deg, transparent 230deg, var(--color) 230deg, var(--color) 250deg, transparent 250deg, transparent 270deg, var(--color) 270deg, var(--color) 290deg, transparent 290deg, transparent 310deg, var(--color) 310deg, var(--color) 330deg, transparent 330deg, transparent 350deg, var(--color) 350deg, var(--color) 360deg);
+  border-radius: 50%;
+  transform: rotate(0deg);
+  animation: var(--animation-timing-function) var(--animation-duration) infinite loader;
+}
+.contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper .contacts-section__msg-wrapper .success-msg {
+  font-family: "OpenSans";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #00aa00;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 @media (max-width: 480px) {
-  .contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__contact-form-submit-btn {
-    align-self: center;
+  .contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper .contacts-section__msg-wrapper .success-msg {
+    text-align: center;
+  }
+}
+.contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper .contacts-section__msg-wrapper .fail-msg {
+  font-family: "OpenSans";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #ff0000;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media (max-width: 480px) {
+  .contacts-section__info-wrapper .contacts-section__contact-form .contacts-section__btn-msg-wrapper .contacts-section__msg-wrapper .fail-msg {
+    text-align: center;
   }
 }
 
@@ -797,6 +886,14 @@
   margin-inline: auto;
 }
 
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .global-container {
   position: relative;
   max-width: 1920px;
@@ -1092,9 +1189,18 @@
   background-color: #ffa501;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
+.modal-window__wrapper .modal-window__btns-wrapper .modal-window__btn:disabled {
+  transform: none;
+  filter: grayscale(0.5) brightness(0.75);
+}
+@media (max-width: 480px) {
+  .modal-window__wrapper .modal-window__btns-wrapper .modal-window__btn {
+    padding-inline: 12px;
+  }
+}
 @media (max-width: 360px) {
   .modal-window__wrapper .modal-window__btns-wrapper .modal-window__btn {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 16px;
   }
 }/*# sourceMappingURL=glStyle.css.map */

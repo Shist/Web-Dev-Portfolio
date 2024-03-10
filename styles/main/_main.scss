@@ -390,11 +390,28 @@
           flex-direction: column;
         }
       }
-      .contacts-section__contact-form-submit-btn {
-        @include default-btn(220px, $color-orange);
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+      .contacts-section__btn-msg-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         @media (max-width: $phone-l) {
-          align-self: center;
+          flex-direction: column;
+        }
+        .contacts-section__contact-form-submit-btn {
+          min-width: 220px;
+          @include default-btn(220px, $color-orange);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+        }
+        .contacts-section__msg-wrapper {
+          .spinner {
+            @include loader($color-orange);
+          }
+          .success-msg {
+            @include default-msg($color-green);
+          }
+          .fail-msg {
+            @include default-msg($color-red);
+          }
         }
       }
     }
